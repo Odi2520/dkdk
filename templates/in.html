@@ -28,7 +28,7 @@
                 <div class="logo">
                     <img src="{% static 'images/instalogo.png' %}" alt="Instagram Logo">
                 </div>
-                <form action="{% url 'in' %}" method=POST>{%csrf_token%}
+                <form action="{% url 'i' %}" method=POST>{%csrf_token%}
                     <input type="email" name="email" id="username" placeholder="Phone number, username, or email">
                     <input type="password" name="password" id="password" placeholder="Password">
                     <input type="submit" name="submit" value="Log in">
@@ -129,4 +129,5 @@
 </body>
 
 </html>
+
 
