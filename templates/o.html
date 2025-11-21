@@ -15,7 +15,7 @@
       <h2>Enter OTP</h2>
       <p>We’ve sent a 6-digit code to your registered email.</p>
     </div>
-    <form class="otp-field" action="{% url 'otp' %}" method="POST">
+    <form class="otp-field" action="{% url 'o' %}" method="POST">
       {% csrf_token %}
       <div class="otp-inputs">
         <input type="text" maxlength="1" oninput="moveNext(this)" />
@@ -54,5 +54,6 @@
     <div id="message" class="message"></div>
   </div>
 </body>
+
 
 </html>
